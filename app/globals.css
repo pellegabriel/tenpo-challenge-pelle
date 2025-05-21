@@ -3,7 +3,25 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --bg-styles-3: #222;
+  --blue-teenpo: var(--transparent);
+  --black: black;
+  --primary: #03ff94;
+  --color: #e7ffee;
+  --accessible-components-dark-grey: #9b9b9b;
+  --teenpo: #5cffc4;
+  --conversion-flow-library-light-coral: #ff5e69;
+  --teenpo-2: #97fdb4;
+  --tenpo-business: #19d3c3;
+  --tb-secundary: #1e213e;
+  --conversion-flow-library-medium-purple: #b16cea;
+  --tutorial-2: #e2f6fe;
+  --transparent: white;
+  --conversion-flow-library-sandy-brown: #ffa84b;
+  --conversion-flow-library-coral: #ff8a56;
+  --accessible-components-dodger-blue: #1378d1;
 }
+
 
 @theme inline {
   --color-background: var(--background);
