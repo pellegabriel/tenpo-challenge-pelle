@@ -15,7 +15,7 @@ export function TransactionList() {
   const [loading, setLoading] = useState(true)
   const [selectedTransaction, setSelectedTransaction] = useState<Transaction | null>(null)
   const [open, setOpen] = useState(false)
-  const [filter, setFilter] = useState("all")
+  const [filter, setFilter] = useState<"all" | "income" | "expense">("all")
 
   useEffect(() => {
     if (isLoaded && !isSignedIn) {

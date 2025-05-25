@@ -1,8 +1,8 @@
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 interface TransactionFilterProps {
-  value: string
-  onChange: (value: string) => void
+  value: "all" | "income" | "expense"
+  onChange: (value: "all" | "income" | "expense") => void
 }
 
 export function TransactionFilter({ value, onChange }: TransactionFilterProps) {

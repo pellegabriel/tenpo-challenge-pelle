@@ -34,15 +34,16 @@ export const metadata: Metadata = {
     title: "Tenpo Challenge - Modern Financial Management",
     description: "A modern financial management solution designed to simplify your transaction tracking and payment processing.",
   },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-  },
   robots: {
     index: true,
     follow: true,
   },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({
