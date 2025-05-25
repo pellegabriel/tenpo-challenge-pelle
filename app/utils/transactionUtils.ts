@@ -17,7 +17,7 @@ export const transformProductToTransaction = (product: Product): Transaction => 
   category: product.category
 })
 
-export const filterTransactions = (transactions: Transaction[], filter: string): Transaction[] => {
+export const filterTransactions = (transactions: Transaction[], filter: 'all' | 'income' | 'expense'): Transaction[] => {
   if (filter === "all") return transactions
   return transactions.filter(transaction => transaction.type === filter)
 } 
