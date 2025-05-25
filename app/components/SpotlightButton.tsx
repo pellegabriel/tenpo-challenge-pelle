@@ -56,7 +56,7 @@ const SpotlightButton = ({
 
   return (
     <button 
-      className={`${sizeClasses[size]} font-medium bg-[var(--primary)] text-black w-fit transition-all shadow-[3px_3px_0px_black] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] ${className}`}
+      className={`${sizeClasses[size]} font-medium bg-[var(--primary)] text-black w-fit transition-all shadow-[3px_3px_0px_#942db2] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] ${className}`}
     >
       {label}
     </button>

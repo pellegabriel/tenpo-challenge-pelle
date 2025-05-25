@@ -1,8 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tenpo Challenge - Financial Management App
+
+This is a modern financial management application developed as a challenge, focusing on transaction tracking, payment processing, and showcasing good development practices.
+
+## Features
+
+- Real-time transaction tracking (simulated)
+- Financial history view
+- User authentication (via Clerk)
+- Interactive 3D model visualization (using Three.js)
+- Responsive design
+- Improved accessibility
+- Basic error handling
+
+## Technologies Used
+
+- Next.js (React Framework)
+- TypeScript
+- Tailwind CSS
+- Clerk (for authentication)
+- Three.js (for 3D visualization)
+- Lucide React (for icons)
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- Node.js (v18 or later recommended)
+- npm, yarn, or pnpm
+- Git
 
 ## Getting Started
 
-First, run the development server:
+Follow these steps to get the project up and running on your local machine.
+
+### 1. Clone the Repository
+
+```bash
+git clone [repository_url]
+cd tenpo-challenge-pelle
+```
+
+Replace `[repository_url]` with the actual URL of the repository.
+
+### 2. Install Dependencies
+
+Choose your preferred package manager and run the corresponding command in the project root directory:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+### 3. Set up Environment Variables
+
+Create a `.env.local` file in the project root directory based on the `.env.example` file (if provided). You will need to add your Clerk environment variables.
+
+```env
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_publishable_key
+CLERK_SECRET_KEY=your_secret_key
+```
+
+Replace `your_publishable_key` and `your_secret_key` with your actual Clerk keys.
+
+### 4. Run the Development Server
 
 ```bash
 npm run dev
@@ -10,27 +73,56 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+tenpo-challenge-pelle/
+├── app/             # Next.js App Router directory
+│   ├── (auth)/      # Authentication routes
+│   ├── about/       # About page
+│   ├── api/         # API routes
+│   ├── components/  # Reusable React components
+│   ├── providers/   # Context and provider components
+│   ├── utils/       # Utility functions
+│   └── layout.tsx   # Root layout
+│   └── page.tsx     # Home page
+├── public/          # Static assets (images, models, etc.)
+├── styles/          # Global styles (CSS)
+├── types/           # TypeScript type definitions
+├── .env.example     # Environment variables example
+├── .gitignore       # Git ignore file
+├── next.config.js   # Next.js configuration
+├── package.json     # Project dependencies
+├── postcss.config.js # PostCSS configuration
+├── README.md        # Project README
+├── tailwind.config.ts # Tailwind CSS configuration
+└── tsconfig.json    # TypeScript configuration
+```
 
-## Learn More
+*Note: This structure is a general outline and may vary slightly.*
 
-To learn more about Next.js, take a look at the following resources:
+## Running Tests
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+(Section to be completed once tests are implemented)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To run the unit and integration tests, use the following command:
 
-## Deploy on Vercel
+```bash
+npm test
+# or
+yarn test
+# or
+pnpm test
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+(Optional section on how to contribute)
+
+## License
+
+(Optional section on project license)

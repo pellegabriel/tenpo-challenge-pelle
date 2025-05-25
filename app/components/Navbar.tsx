@@ -1,27 +1,27 @@
 'use client'
 import { Button } from '@/components/ui/button';
 import { SignInButton, SignUpButton, UserButton, useUser } from '@clerk/nextjs';
-import { HomeIcon, Zap } from 'lucide-react'
+import { HomeIcon, Zap, Info } from 'lucide-react'
 import Link from 'next/link'
 import SpotlightButton from './SpotlightButton'
 
 const Navbar = () => {
     const { isSignedIn } = useUser();
     return (
-        <header className="fixed top-0 left-0 right-0 border-b border-[var(--accessible-components-dark-grey)]/20 backdrop-blur-sm bg-black">
+        <header className="fixed top-0 left-0 right-0 border-b border-[var(--accessible-components-dark-grey)]/20 backdrop-blur-sm bg-black z-50">
             <div className="container mx-auto px-4 h-16 flex items-center justify-between">
                 <Link href="/" className="flex items-center gap-2">
                     <div className="p-2 rounded-lg bg-[var(--primary)]/10">
                         <Zap className="w-5 h-5 text-[var(--primary)]" />
                     </div>
-                    <span className="font-semibold text-white">My Project</span>
+                        <span className="font-semibold text-white">Tenpo Challenge</span>
                 </Link>
                 <nav className='flex items-center gap-5'>
                     {isSignedIn ? (
                         <>
                             <Link
                                 href='/'
-                                className='flex items-center gap-1.5 text-sm text-white hover:text-[var(--primary)] transition-colors'
+                                className='hidden md:flex items-center gap-1.5 text-sm text-white hover:text-[var(--primary)] transition-colors'
                             >
                                 <HomeIcon size={16}/>
                                 <span>
@@ -29,7 +29,16 @@ const Navbar = () => {
                                 </span>
                             </Link>
                             <Link
-                                href='/generate-program'
+                                href='/about'
+                                className='hidden md:flex items-center gap-1.5 text-sm text-white hover:text-[var(--primary)] transition-colors'
+                            >
+                                <Info size={16}/>
+                                <span>
+                                    About Us
+                                </span>
+                            </Link>
+                            <Link
+                                href='/transactions' className='mb-2'
                             >
                                 <SpotlightButton label="Get Started" size="sm" />
                             </Link>
@@ -37,17 +46,11 @@ const Navbar = () => {
                         </>
                     ) : (
                         <>
-                            <SignInButton>
-                                <Button>
-                                    Sign In
-                                </Button>
-                            </SignInButton>
-
-                            <SignUpButton>
-                                <Button>
-                                    Sign up
-                                </Button>
-                            </SignUpButton>
+                    <Link
+                                href='/transactions' className='mb-2'
+                            >
+                                <SpotlightButton label="Get Started" size="sm" />
+                            </Link>
                         </>
                     )
                     }
