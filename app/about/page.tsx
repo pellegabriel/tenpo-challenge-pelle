@@ -66,7 +66,7 @@ export default function AboutPage() {
             <div className="bg-black/40 p-8 rounded-lg border border-[var(--accessible-components-dark-grey)]/20">
                 <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
                 <p className="text-[var(--accessible-components-dark-grey)] mb-6">
-                    We're dedicated to providing a seamless and secure financial management experience. Our platform combines powerful features with an intuitive interface, making financial transactions simpler and more accessible for everyone.
+                    We&apos;re dedicated to providing a seamless and secure financial management experience. Our platform combines powerful features with an intuitive interface, making financial transactions simpler and more accessible for everyone.
                 </p>
                 <Link href="/transactions" className="inline-flex items-center gap-2 text-[var(--primary)] hover:opacity-80 transition-opacity">
                     <span className="font-medium">Get Started Today</span>

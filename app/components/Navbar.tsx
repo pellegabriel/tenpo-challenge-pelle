@@ -1,6 +1,5 @@
 'use client'
-import { Button } from '@/components/ui/button';
-import { SignInButton, SignUpButton, UserButton, useUser } from '@clerk/nextjs';
+import { UserButton, useUser } from '@clerk/nextjs';
 import { HomeIcon, Zap, Info } from 'lucide-react'
 import Link from 'next/link'
 import SpotlightButton from './SpotlightButton'

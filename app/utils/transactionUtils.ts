@@ -1,7 +1,7 @@
 import { Transaction } from "@/types/transaction"
 
 interface Product {
-  id: any; 
+  id: number; 
   price: number;
   title: string;
   category: string;
